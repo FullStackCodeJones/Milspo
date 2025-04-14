@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milspo Refuge</title>
+    <link rel="stylesheet" href="milspo-refuge.css" />
+  </head>
+  <nav>
+    <a href="index.html">⬅️Back To Home</a>
+  </nav>
+  <body>
+    <section class="letter-section">
+      <h1>Hey New Milspo. How you doin'?</h1>
+      <h3>Yeah... I know. FELT</h3>
+      <br />
+      <h2>The Pain I Felt💔</h2>
+      <br />
+      <p>
+        When he left, it felt like my heart was literally being ripped out of my
+        chest. I couldn't sleep for a while without him. I had little to no
+        appetite. I barely had a fake smile in me but I tried to smile anyway,
+        for the kids... I cried in the shower so no one would hear my sobs. Very
+        much one of the hardest things that I have ever had to do.
+      </p>
+      <br />
+      <h2>The Thought's I Couldn't Share</h2>
+      <br />
+      <p>
+        If you haven't already heard, you're supposed to be so strong for them
+        and never write them about how you're feeling if you are sad, or upset,
+        or scared.. Nothing negative. DON'T YOU DARE. Don't you dare be human
+        and want to vent to your best friend. They belong to the Department Of
+        Defense now, and they don't need to be boggled down with your silly
+        civilian emotions. *Insert heavy eye roll/side eye* Such BULL. Basically
+        suck it up buttercup. If you love them then you'll grit and bare it.
+        What about us though? At least that's where my mind went. I questioned
+        EVERYTHING. Was I strong enough for this life? Would he change(and not
+        in a good way)? Would he forget about me? Was I being dramatic(all of
+        those *seasoned* military parents and spouses would certainly say so)?
+        Sometimes I wanted to scream, but I didn't want to seem ungrateful,
+        everyone says to be happy for this rare opportunity, "an opportunity of
+        a lifetime". I wanted to be proud and supportive and believe me I AM,
+        but I was also lonely and scared. Oh and don't get me started on the
+        horror stories, quick tip.. please stay of of those military spouse
+        groups. Did I say that already? Even if I did, it is worth repeating.
+        Trust me on this one!
+      </p>
+      <br />
+      <h2>The Spiritual Anchoring</h2>
+      <p>
+        Whether you are religious, spiritual or agnostic... Listen. You're going
+        to end up turning to whatever you believe in. Me? I clung to faith,
+        meditation, prayer, wine... Yes wine, religiously. I clung to moments of
+        peace wherever I could find them. Sometimes that meant just breathing
+        and surviving the day, the hour, the minute really. Somtimes all I could
+        do is cry out to The Creator, whoever or whatever is up there guiding us
+        through all of this. Sometimes I couldn't even do that, I'd just light a
+        candle. I found myself constantly praying for him and his safety and for
+        our love to either stay the same or better yet grow into something even
+        more beautiful than it already was.
+      </p>
+      <br />
+      <h2>The Strength I Didn't Know I Had</h2>
+      <br />
+      <p>
+        Slowly, I started to rebuild. I remembered who I was before the fear,
+        before the pain. I started choosing joy in all the small ways, started
+        doing self care a lot more, working out, speaking affirmations over
+        myself, our marriage, my husband, our family. I started journaling,
+        learning how to love myself while loving him from afar, and I realized,
+        I am far from broken, I am building.
+      </p>
+      <h2>You're Going To Be Ok and I Mean That In The Kindest Way</h2>
+      <p>
+        <strong>
+          If you're reading this and you are feeling like you're drowning in all
+          of the emotions, know that I have been there, and I made it through
+          and so will you. Granted, our journey is not over, and there will
+          still be days where it may seem like literal HELL because we miss
+          them. Know that you are strong and you are seen. I know, you're scared
+          but you're not alone anymore. Welcome to Milspo!
+        </strong>
+      </p>
+    </section>
+    <section class="release-room">
+      <h2>Release Room</h2>
+      <p class="intro">
+        This is your space. You can cry, vent, or question. It's all welcome
+        here. No names necessary, no judgment, just love.
+      </p>
+      <form id="releaseForm">
+        <textarea
+          id="releaseInput"
+          rows="6"
+          placeholder="Let it out, love..."
+        ></textarea
+        ><br />
+        <button type="submit">Release</button>
+      </form>
+      <p class="thank-you" style="display: none">
+        Thank you for trusting this space. You're safe here. 📬
+      </p>
+    </section>
+
+    <script>
+      const form = document.getElementById("releaseForm");
+      const input = document.getElementById("releaseInput");
+      const thankYou = document.querySelector(".thank-you");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (input.value.trim() !== "") {
+          localStorage.setItem("milspoRelease", input.value);
+          input.style.display = "none";
+          form.querySelector("button").style.display = "none";
+          thankYou.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

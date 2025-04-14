@@ -13,6 +13,22 @@ blockquote {
   max-width: 600px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid #004080;
+  border-radius: 6px;
+  background-color: #f0f4ff;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: rgb(232, 67, 67);
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 2rem;
